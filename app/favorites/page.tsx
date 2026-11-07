@@ -1,0 +1,2 @@
+import { getProducts } from '@/lib/store';import Catalog from '@/components/Catalog';
+export default async function FavoritesPage(){const p=await getProducts();return <main className="container min-h-[60vh] py-14"><p className="eyebrow">Guardados neste dispositivo</p><h1 className="mt-3 font-display text-5xl">Favoritos</h1><p className="mt-3 text-sm text-muted">A sua lista é guardada apenas no navegador e não recolhemos dados pessoais.</p><div className="mt-8"><Catalog products={p} mode="favorites"/></div></main>}
